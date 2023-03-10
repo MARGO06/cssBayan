@@ -14,8 +14,8 @@
   }
   .container{
     max-width: 1880px;
-    max-height: 1050px;
     margin: 2% 25%;
+    height: 980px;
     cursor: pointer;
     display: flex; 
     flex-direction: column;
@@ -29,7 +29,7 @@
     font-size: 30px;
     line-height: 25px;
     font-weight: 700;
-    color:darkslategray;
+    color:maroon;
   }
   label{
     font-size: 20px;
@@ -38,10 +38,7 @@
     color:darkslategray;
   }
   .welcome,.expect,.helper,.junior,.done{
-    margin-top: 2%;
-  }
- .accordion-input:checked + .image {
-    display: block;
+    margin-top: 3%;
   }
  .image{
     display: none;
@@ -54,6 +51,21 @@
  input{
     appearance: none;
  }
+ .accordion-title:hover ~ .image {
+    display: block;
+  }
+ .accordion-input:checked ~ .image {
+    display: block;
+  }
  label:hover{
     color: maroon;
+    cursor: pointer;
  }
+ .line{
+    border-bottom: 1px solid #C4C9C3;
+    width: 100%;
+    margin-top: 2%;
+ }
+ .accordion-input:checked ~ label {
+    color: maroon;
+  }
