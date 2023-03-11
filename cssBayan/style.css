@@ -57,13 +57,18 @@
  .accordion-input:hover ~ .image {
   display: block;
  }
- .accordion-input:hover ~ .title .icon {
-  visibility: visible;
- }
  .accordion-input:checked ~ .image {
     display: block;
+ }
+  .accord-input:hover ~ label .title .icon{
+    visibility: visible;
+    transform: rotate(90deg);
   }
-  .accordion-input:checked ~ .title .icon {
+  .accordion-input:checked:hover ~ .title .icon {
+    visibility: visible;
+    transform: rotate(270deg);
+  }
+  .accordion-input:hover ~ .title .icon {
     visibility: visible;
     transform: rotate(270deg);
   }
@@ -80,4 +85,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
- } 
+ }
+ .accord-input:hover ~ label  .title .accordion-title{
+  color: maroon;
+ }
