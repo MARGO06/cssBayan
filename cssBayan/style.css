@@ -16,14 +16,8 @@
     max-width: 1880px;
     margin: 2% 25%;
     height: 980px;
-    cursor: pointer;
     display: flex; 
     flex-direction: column;
-  }
-  .accordion{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between ;
   }
   h1{
     font-size: 30px;
@@ -31,14 +25,23 @@
     font-weight: 700;
     color:maroon;
   }
-  label{
+  .accordion-title{
     font-size: 20px;
     line-height: 16px;
     font-weight: 700;
     color:darkslategray;
+    margin-top: 1%;
   }
-  .welcome,.expect,.helper,.junior,.done{
-    margin-top: 3%;
+  .welcome,.expert,.helper,.junior,.done{
+    margin-top: 1%;
+  }
+  .container,label:hover{
+    cursor: pointer;
+   }
+  .icon{
+  visibility: hidden;
+  transform: rotate(90deg);
+  font-size: 1rem;
   }
  .image{
     display: none;
@@ -51,21 +54,30 @@
  input{
     appearance: none;
  }
- .accordion-title:hover ~ .image {
-    display: block;
-  }
+ .accordion-input:hover ~ .image {
+  display: block;
+ }
+ .accordion-input:hover ~ .title .icon {
+  visibility: visible;
+ }
  .accordion-input:checked ~ .image {
     display: block;
   }
- label:hover{
-    color: maroon;
-    cursor: pointer;
- }
+  .accordion-input:checked ~ .title .icon {
+    visibility: visible;
+    transform: rotate(270deg);
+  }
  .line{
     border-bottom: 1px solid #C4C9C3;
     width: 100%;
     margin-top: 2%;
  }
- .accordion-input:checked ~ label {
+ .accordion-input:checked ~ .title h2,.icon {
     color: maroon;
   }
+ .title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+ } 
