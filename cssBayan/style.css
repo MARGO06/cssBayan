@@ -12,54 +12,55 @@
     flex-direction: column;
     height: 100%;
   }
+@media (max-width: 1920px) and (max-height:1080px){
   .container{
-    max-width: 1880px;
+    max-width: 98%;
     margin: 2% 25%;
-    height: 980px;
+    height: 90%;
     display: flex; 
     flex-direction: column;
   }
   h1{
-    font-size: 30px;
-    line-height: 25px;
+    font-size: 2.0rem;
+    line-height: 1.5rem;
     font-weight: 700;
     color:maroon;
   }
   .accordion-title{
-    font-size: 20px;
-    line-height: 16px;
+    font-size: 1.2rem;
+    line-height: 0.5rem;
     font-weight: 700;
     color:darkslategray;
-    margin-top: 1%;
-  }
-  .welcome,.expert,.helper,.junior,.done{
-    margin-top: 1%;
   }
   .container,label:hover{
     cursor: pointer;
-   }
+  }
   .icon{
   visibility: hidden;
   transform: rotate(90deg);
   font-size: 1rem;
   }
- .image{
+  .image{
     display: none;
     width: 50%;
     margin: 0 auto;
- }
- .accordion-image{
+  }
+  .accordion-image{
     width: 75%;
- }
- input{
+  }
+  input{
     appearance: none;
- }
- .accordion-input:hover ~ .image {
-  display: block;
- }
- .accordion-input:checked ~ .image {
+  }
+  .image:hover{
+    transition-duration: 2s;
+  }
+  .accordion-input:hover ~ .image {
+   display: block;
+   transition: all 2s ease;
+  }
+  .accordion-input:checked ~ .image {
     display: block;
- }
+  }
   .accord-input:hover ~ label .title .icon{
     visibility: visible;
     transform: rotate(90deg);
@@ -72,11 +73,10 @@
     visibility: visible;
     transform: rotate(270deg);
   }
- .line{
-    border-bottom: 1px solid #C4C9C3;
+  .line{
+    border-bottom: 0.1rem solid #C4C9C3;
     width: 100%;
-    margin-top: 2%;
- }
+  }
  .accordion-input:checked ~ .title h2,.icon {
     color: maroon;
   }
@@ -89,3 +89,4 @@
  .accord-input:hover ~ label  .title .accordion-title{
   color: maroon;
  }
+}
