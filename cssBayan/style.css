@@ -68,4 +68,16 @@
   .accordion-input:checked ~ .title h2,.icon {
     color: maroon;
   }
+@media (min-width: 820px) and (min-height:1180px){
+  h1{
+    font-size: 1.5rem;
+    line-height: 0.5rem;
+    font-weight: 700;
+    color:maroon;
+  }
+  .accordion-title{
+    font-size: 1.0rem;
+    line-height: 0.3rem;
+  }
+}
 }
